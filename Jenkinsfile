@@ -3,6 +3,7 @@ node {
         git branch: 'master', url: 'https://github.com/dummyrepos/game-of-life.git'
     }
     stage('maven') {
+           sh 'echo buildng package'
            sh 'mvn package'
     }
     stage('Sonar') {
